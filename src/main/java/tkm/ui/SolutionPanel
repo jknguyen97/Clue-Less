@@ -1,0 +1,30 @@
+package tkm.ui;
+
+import tkm.gamelogic.Card;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+
+/**
+ * @file SolutionPanel.java
+ * @date 11/30/2024
+ * @author Justin
+ *
+ * This panel displays the correct solution of the game for
+ * presentation purposes.
+ */
+
+public class SolutionPanel extends JPanel {
+
+    // Constructor that accepts the solution details
+    public SolutionPanel(Card correctSuspect, Card correctWeapon, Card correctRoom) {
+
+        this.setLayout(new GridLayout(1, 0, 1, 0));
+
+        // Create and add labels with solution details
+        this.add(new JLabel("Suspect: " + correctSuspect.getName())); // Assuming Card has a getName() method
+        this.add(new JLabel("Weapon: " + correctWeapon.getName()));
+        this.add(new JLabel("Room: " + correctRoom.getName()));
+    }
+}
